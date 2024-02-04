@@ -1,3 +1,4 @@
+// MenuList.js
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -13,7 +14,6 @@ class Menu extends React.Component {
       { id: 5, name: "Science", value: "science" },
       { id: 6, name: "Sports", value: "sports" },
       { id: 7, name: "Technology", value: "technology" },
-      { id: 8, name: "Profile", value: "profile" },
     ];
 
     const onClick = (id, value) => {
@@ -50,7 +50,7 @@ class Menu extends React.Component {
                     className={`nav-link ${
                       active === link.id ? "text-danger" : ""
                     }`}
-                    to={`/${link.value}`}
+                    to={`/category/${link.value}`}
                   >
                     {link.name}
                   </Link>
