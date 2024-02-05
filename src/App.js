@@ -36,11 +36,11 @@ function App() {
   return (
     <div className="container">
       <Router>
-        <h1 className="text-center mt-5">See the Latest News</h1>
+        <h1 className="text-center mt-5 mb-3 fw-bold">See the Latest News</h1>
         <Menu active={active} setActive={setActive} setCategory={setCategory} />
         <Routes>
-          <Route path="/category/:category" element={<NewsGrid items={items} />} />
           <Route path="/" element={<Navigate to="/category/all" />} />
+          <Route path="/category/:category" element={<NewsGrid items={items} />} />
         </Routes>
       </Router>
     </div>
